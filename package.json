@@ -1,0 +1,27 @@
+{
+  "name": "3em_website",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "fmt": "prettier --write .",
+    "fmt:check": "prettier --check ."
+  },
+  "gitHooks": {
+    "pre-commit": "prettier --write . && git add -A"
+  },
+  "dependencies": {
+    "next": "12.0.7",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "17.0.0",
+    "@types/react": "17.0.37",
+    "prettier": "^2.5.1",
+    "sass": "^1.45.0",
+    "typescript": "4.5.4",
+    "yorkie": "^2.0.0"
+  }
+}
