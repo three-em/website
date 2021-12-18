@@ -1,0 +1,42 @@
+@use "../variables"
+
+.Button
+  display: flex
+  position: relative
+  outline: none
+  border: none
+  cursor: pointer
+  background-color: variables.$blue-theme
+  color: #fff
+  font-weight: 500
+  font-size: .95em
+  line-height: 1.1em
+  text-align: center
+  border-radius: 9px
+  padding: .65em 1em
+    top: .688em
+  align-items: center
+  transition: all .23s ease-in-out
+
+  &:hover, &:disabled
+    background-color: rgba(variables.$blue-theme, .8)
+
+  &:disabled
+    cursor: not-allowed
+    color: rgba(#fff, .77)
+
+  &.Secondary
+    color: variables.$blue-theme
+    background-color: rgba(variables.$blue-theme, .2)
+
+    &:hover, &:disabled
+      background-color: rgba(variables.$blue-theme, .17)
+
+    &:disabled
+      color: rgba(variables.$blue-theme, .77)
+
+  svg
+    margin-right: .4em
+    width: 1.1em
+    height: 1.1em
+    font-size: 1em
