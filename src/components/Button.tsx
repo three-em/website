@@ -5,7 +5,7 @@ export default function Button({
   children,
   className,
   secondary,
-  disabled = false,
+  disabled = false
 }: PropsWithChildren<Props>) {
   return (
     <button
