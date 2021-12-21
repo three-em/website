@@ -1,5 +1,10 @@
 import { CodeIcon, DownloadIcon } from "@iconicicons/react";
-import Image from "next/image";
+import asLogo from "../assets/language-icons/as.svg";
+import goLogo from "../assets/language-icons/go.svg";
+import jsLogo from "../assets/language-icons/js.svg";
+import rustLogo from "../assets/language-icons/rust.svg";
+import solidityLogo from "../assets/language-icons/solidity.svg";
+import tsLogo from "../assets/language-icons/ts.svg";
 import Button from "../components/Button";
 import styles from "../styles/views/Home.module.sass";
 
@@ -33,6 +38,22 @@ export default function Home() {
             </div>
           </div>
           <img src="/terminal.svg" draggable={false} />
+        </div>
+      </div>
+      <div className={styles.LanguageSection}>
+        <h1 className={styles.SecondaryTitle}>Permanent contracts.</h1>
+        <h1>Any programming language.</h1>
+        <p>
+          Use your favorite programming language to write contracts and decide
+          which fits your project better.
+        </p>
+        <div className={styles.LanguageIcons}>
+          <img src={jsLogo} alt="js" className={styles.Language} />
+          <img src={tsLogo} alt="ts" className={styles.Language} />
+          <img src={rustLogo} alt="rust" className={styles.Language} />
+          <img src={goLogo} alt="go" className={styles.Language} />
+          <img src={asLogo} alt="as" className={styles.Language} />
+          <img src={solidityLogo} alt="solidity" className={styles.Language} />
         </div>
       </div>
     </>
