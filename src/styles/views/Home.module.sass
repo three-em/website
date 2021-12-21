@@ -1,0 +1,66 @@
+@use "../variables"
+
+.Landing
+  position: relative
+  width: 100vw
+  height: 100vh
+
+  .LandingContent
+    position: absolute
+    display: flex
+    align-items: center
+    justify-content: space-between
+    top: 50%
+    left: 50%
+    width: calc(100vw - #{variables.$side-padding * 2})
+    transform: translate(-50%, -50%)
+
+    img
+      width: 45%
+      user-select: none
+
+    .LandingText
+      width: 45%
+
+      h1, h2
+        color: #000
+        line-height: 1.1em
+
+      h1
+        font-size: 3.8em
+        font-weight: 600
+        margin: 0
+
+      h2
+        display: flex
+        align-items: center
+        font-size: 1.65em
+        font-weight: 500
+        margin: .5em 0
+
+        .ContractLanguage
+          position: relative
+          margin-left: .25em
+
+          .Selector
+            position: absolute
+            top: -0.1em
+            left: -0.17em
+            right: -0.17em
+            bottom: -0.1em
+            background-color: variables.$blue-theme
+            z-index: 1
+
+          span
+            position: relative
+            z-index: 10
+
+      p
+        font-size: 1em
+        font-weight: 400
+        color: variables.$light-text
+        margin: 1em 0
+          bottom: 1.65em
+
+      button:first-child
+        margin-right: 2em
