@@ -1,4 +1,6 @@
 import { CodeIcon, DownloadIcon } from "@iconicicons/react";
+import codeImage from "../assets/code.svg";
+import codeTerminalImage from "../assets/code-terminal.svg";
 import asLogo from "../assets/language-icons/as.svg";
 import goLogo from "../assets/language-icons/go.svg";
 import jsLogo from "../assets/language-icons/js.svg";
@@ -37,7 +39,7 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <img src="/terminal.svg" draggable={false} />
+          <img src={codeImage} draggable={false} />
         </div>
       </div>
       <div className={styles.LanguageSection}>
@@ -48,13 +50,49 @@ export default function Home() {
           which fits your project better.
         </p>
         <div className={styles.LanguageIcons}>
-          <img src={jsLogo} alt="js" className={styles.Language} />
-          <img src={tsLogo} alt="ts" className={styles.Language} />
-          <img src={rustLogo} alt="rust" className={styles.Language} />
-          <img src={goLogo} alt="go" className={styles.Language} />
-          <img src={asLogo} alt="as" className={styles.Language} />
-          <img src={solidityLogo} alt="solidity" className={styles.Language} />
+          <img
+            src={jsLogo}
+            alt="js"
+            className={styles.Language}
+            draggable={false}
+          />
+          <img
+            src={tsLogo}
+            alt="ts"
+            className={styles.Language}
+            draggable={false}
+          />
+          <img
+            src={rustLogo}
+            alt="rust"
+            className={styles.Language}
+            draggable={false}
+          />
+          <img
+            src={goLogo}
+            alt="go"
+            className={styles.Language}
+            draggable={false}
+          />
+          <img
+            src={asLogo}
+            alt="as"
+            className={styles.Language}
+            draggable={false}
+          />
+          <img
+            src={solidityLogo}
+            alt="solidity"
+            className={styles.Language}
+            draggable={false}
+          />
         </div>
+        <img
+          src={codeTerminalImage}
+          alt="code-and-terminal"
+          className={styles.CodeAndTerminal}
+          draggable={false}
+        />
       </div>
     </>
   );
