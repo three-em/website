@@ -8,6 +8,7 @@ import rustLogo from "../assets/language-icons/rust.svg";
 import solidityLogo from "../assets/language-icons/solidity.svg";
 import tsLogo from "../assets/language-icons/ts.svg";
 import Button from "../components/Button";
+import FeatureCard from "../components/FeatureCard";
 import styles from "../styles/views/Home.module.sass";
 
 export default function Home() {
@@ -93,6 +94,19 @@ export default function Home() {
           className={styles.CodeAndTerminal}
           draggable={false}
         />
+      </div>
+      <div className={styles.Features}>
+        <div className={styles.FeaturesWrapper}>
+          <FeatureCard />
+          <div className={styles.FeatureSpacer} />
+          <FeatureCard purple />
+          <div className={styles.FeatureSpacer} />
+          <FeatureCard />
+          <div className={styles.FeatureSpacer} />
+          <FeatureCard purple />
+          <div className={styles.FeatureSpacer} />
+          <FeatureCard />
+        </div>
       </div>
     </>
   );

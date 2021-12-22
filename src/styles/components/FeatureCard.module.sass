@@ -1,0 +1,62 @@
+@use "../variables"
+
+.Card
+  position: relative
+  overflow: hidden
+  width: 330px
+  height: 435px
+  border-radius: 30px
+  background-color: variables.$blue-theme
+  box-shadow: variables.$standard-shadow
+
+  &.Purple
+    background-color: variables.$purple-theme
+
+  .Content
+    $topPadding: 1.2em
+    position: relative
+    display: flex
+    justify-content: space-between
+    flex-direction: column
+    z-index: 10
+    height: calc(100% - #{$topPadding * 2})
+    padding: $topPadding 1.5em
+
+    .Title
+      h1
+        font-size: 1.7em
+        color: #fff
+        font-weight: 600
+        margin: 0
+        line-height: 1.1em
+
+      p
+        font-size: .7em
+        text-transform: uppercase
+        color: #fff
+        font-weight: 400
+        margin: 0
+
+    p
+      font-size: .9em
+      color: #fff
+      font-weight: 400
+      margin: 0
+      text-align: justify
+
+  .GradientBackground
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 15%
+    background: linear-gradient(180deg, rgba(#000, 0) 0%, #000 100%)
+    z-index: 5
+
+  .FeaturePreview
+    position: absolute
+    top: 38%
+    left: 24%
+    right: 0
+    bottom: 0
+    z-index: 1
