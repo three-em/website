@@ -1,4 +1,5 @@
 import { CodeIcon, DownloadIcon } from "@iconicicons/react";
+import { useEffect } from "react";
 import codeImage from "../assets/code.svg";
 import codeTerminalImage from "../assets/code-terminal.svg";
 import asLogo from "../assets/language-icons/as.svg";
@@ -9,9 +10,37 @@ import solidityLogo from "../assets/language-icons/solidity.svg";
 import tsLogo from "../assets/language-icons/ts.svg";
 import Button from "../components/Button";
 import FeatureCard from "../components/FeatureCard";
+import Typed from "typed.js";
 import styles from "../styles/views/Home.module.sass";
 
 export default function Home() {
+  useEffect(() => {
+    const options = {
+      strings: [
+        "WASM",
+        "Rust",
+        "Solidity",
+        "Go",
+        "JavaScript",
+        "TypeScript",
+        "AssemblyScript"
+      ],
+      loop: true,
+      loopCount: 2,
+
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000,
+      smartBackspace: false
+    };
+
+    const typed = new Typed("#typed", options);
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
   return (
     <>
       <div className={styles.Landing}>
@@ -21,7 +50,7 @@ export default function Home() {
             <h2>
               Write contracts in{" "}
               <div className={styles.ContractLanguage}>
-                <span>Rust</span>
+                <span id="typed" />
                 <div className={styles.Selector} />
               </div>
             </h2>
