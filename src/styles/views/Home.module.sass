@@ -132,6 +132,7 @@
   align-items: center
   justify-content: space-between
   padding: variables.$side-padding
+    bottom: 0
   $contentWidth: 46%
 
   .Content
@@ -170,6 +171,7 @@
       text-decoration: none
       color: variables.$blue-theme
       font-weight: 500
+      width: max-content
       transition: all .23s ease-in-out
 
       &:hover
@@ -182,4 +184,70 @@
         margin-left: .3em
 
   .Demonstrate
+    position: relative
     width: $contentWidth
+
+.SpeedData
+  span
+    display: block
+    font-size: .9em
+    font-weight: 500
+    color: variables.$light-text
+    text-transform: uppercase
+    margin: 0
+      bottom: .37em
+
+  .SpeedGraph
+    position: relative
+    width: 100%
+    height: 1.5em
+    background-color: #F9F7F7
+    border-radius: 8px
+    overflow: hidden
+    margin-bottom: 1.3em
+
+    .Filler
+      position: absolute
+      top: 0
+      left: 0
+      bottom: 0
+      background-color: variables.$blue-theme
+      border-radius: 8px
+      transition: all .23s ease-in-out
+
+  .Datas
+    $borderColor: #EAEAEA
+    border-top: 1px solid $borderColor
+    margin-top: 1em
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    .Cell
+      display: flex
+      flex-direction: column
+      width: calc(50% - 1px)
+
+      span
+        text-transform: normal
+        margin-top: .3em
+        margin-left: .5em
+
+      h1
+        font-size: 3.8em
+        text-align: center
+        margin: 0
+        font-weight: 500
+        line-height: 1.7em
+
+      &:first-child
+        border-right: 1px solid $borderColor
+        width: calc(50% + 1px)
+
+        span
+          margin-left: 0
+
+.ArTiles
+  margin-left: -(variables.$side-padding)
+  user-select: none
+  width: calc(100% + variables.$side-padding)

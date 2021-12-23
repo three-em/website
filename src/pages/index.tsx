@@ -1,5 +1,6 @@
 import { ArrowRightIcon, CodeIcon, DownloadIcon } from "@iconicicons/react";
 import { useEffect } from "react";
+import arTiles from "../assets/tiles.png";
 import codeImage from "../assets/code.svg";
 import codeTerminalImage from "../assets/code-terminal.svg";
 import asLogo from "../assets/language-icons/as.svg";
@@ -11,6 +12,7 @@ import tsLogo from "../assets/language-icons/ts.svg";
 import Button from "../components/Button";
 import FeatureCard from "../components/FeatureCard";
 import Typed from "typed.js";
+import Head from "next/head";
 import styles from "../styles/views/Home.module.sass";
 
 export default function Home() {
@@ -43,6 +45,9 @@ export default function Home() {
 
   return (
     <>
+      <Head>
+        <title>3em</title>
+      </Head>
       <div className={styles.Landing}>
         <div className={styles.LandingContent}>
           <div className={styles.LandingText}>
@@ -157,7 +162,51 @@ export default function Home() {
             <ArrowRightIcon />
           </a>
         </div>
-        <div className={styles.Demonstrate}></div>
+        <div className={styles.Demonstrate + " " + styles.SpeedData}>
+          <span>3em</span>
+          <div className={styles.SpeedGraph}>
+            <div className={styles.Filler} style={{ width: "30%" }} />
+          </div>
+          <span>SmartWeave</span>
+          <div className={styles.SpeedGraph}>
+            <div className={styles.Filler} style={{ width: "75%" }} />
+          </div>
+          <div className={styles.Datas}>
+            <div className={styles.Cell}>
+              <span>3EM</span>
+              <h1>2.20s</h1>
+            </div>
+            <div className={styles.Separator} />
+            <div className={styles.Cell}>
+              <span>SmartWeave</span>
+              <h1>8.13s</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={styles.Explainer}>
+        <div className={styles.Demonstrate}>
+          <img src="/tiles.png" alt="arweave" className={styles.ArTiles} />
+        </div>
+        <div className={styles.Content}>
+          <h3>Arweave quality</h3>
+          <h1>Permanent data.</h1>
+          <h2>Immutable contract.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+            neque non excepturi, itaque dolore dolorum deleniti illum et
+            adipisci explicabo praesentium repellendus? Suscipit, autem atque
+            soluta perferendis repudiandae debitis est.
+          </p>
+          <a
+            href="https://arweave.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read more about $AR
+            <ArrowRightIcon />
+          </a>
+        </div>
       </div>
     </>
   );
