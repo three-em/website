@@ -1,4 +1,4 @@
-import { CodeIcon, DownloadIcon } from "@iconicicons/react";
+import { ArrowRightIcon, CodeIcon, DownloadIcon } from "@iconicicons/react";
 import { useEffect } from "react";
 import codeImage from "../assets/code.svg";
 import codeTerminalImage from "../assets/code-terminal.svg";
@@ -136,6 +136,28 @@ export default function Home() {
           <div className={styles.FeatureSpacer} />
           <FeatureCard />
         </div>
+      </div>
+      <div className={styles.Explainer}>
+        <div className={styles.Content}>
+          <h3>Performance first</h3>
+          <h1>Fast contracts.</h1>
+          <h2>Supercharged runtime.</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+            neque non excepturi, itaque dolore dolorum deleniti illum et
+            adipisci explicabo praesentium repellendus? Suscipit, autem atque
+            soluta perferendis repudiandae debitis est.
+          </p>
+          <a
+            href="https://docs.3em.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Build a contract
+            <ArrowRightIcon />
+          </a>
+        </div>
+        <div className={styles.Demonstrate}></div>
       </div>
     </>
   );

@@ -10,8 +10,11 @@ export default function Button({
   return (
     <button
       className={
-        styles.Button + " " + (secondary && styles.Secondary) ||
-        "" + " " + (className ?? "")
+        styles.Button +
+        " " +
+        ((secondary && styles.Secondary) || "") +
+        " " +
+        (className ?? "")
       }
       disabled={disabled}
     >

@@ -111,7 +111,6 @@
 
 .Features
   padding: 0 variables.$side-padding
-    bottom: variables.$side-padding
   overflow-x: auto
   -ms-overflow-style: none
   scrollbar-width: none
@@ -127,3 +126,60 @@
     .FeatureSpacer
       height: 100%
       width: 4em
+
+.Explainer
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: variables.$side-padding
+  $contentWidth: 46%
+
+  .Content
+    width: $contentWidth
+
+    h1, h2, h3
+      margin: 0
+      line-height: 1.15em
+
+    h3
+      color: variables.$light-text
+      text-transform: uppercase
+      font-size: 1em
+      font-weight: 500
+
+    h2, h1
+      font-weight: 600
+      font-size: 2.9em
+
+    h1
+      color: variables.$blue-theme
+
+    p
+      font-size: 1.1em
+      color: variables.$light-text
+      text-align: justify
+      font-weight: 400
+      margin: 1.1em 0
+      line-height: 1.6em
+      letter-spacing: 0.03em
+
+    a
+      font-size: 1.1em
+      display: flex
+      align-items: center
+      text-decoration: none
+      color: variables.$blue-theme
+      font-weight: 500
+      transition: all .23s ease-in-out
+
+      &:hover
+        opacity: .85
+
+      svg
+        font-size: 1.1em
+        width: 1.1em
+        height: 1.1em
+        margin-left: .3em
+
+  .Demonstrate
+    width: $contentWidth
