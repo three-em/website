@@ -1,6 +1,5 @@
 import { ArrowRightIcon, CodeIcon, DownloadIcon } from "@iconicicons/react";
 import { useEffect } from "react";
-import arTiles from "../assets/tiles.png";
 import codeImage from "../assets/code.svg";
 import codeTerminalImage from "../assets/code-terminal.svg";
 import asLogo from "../assets/language-icons/as.svg";
@@ -9,6 +8,7 @@ import jsLogo from "../assets/language-icons/js.svg";
 import rustLogo from "../assets/language-icons/rust.svg";
 import solidityLogo from "../assets/language-icons/solidity.svg";
 import tsLogo from "../assets/language-icons/ts.svg";
+import th8taLogo from "../assets/partners/th8ta.svg";
 import Button from "../components/Button";
 import FeatureCard from "../components/FeatureCard";
 import Typed from "typed.js";
@@ -205,6 +205,21 @@ export default function Home() {
           >
             Read more about $AR
             <ArrowRightIcon />
+          </a>
+        </div>
+      </div>
+      <div className={styles.Partners}>
+        <h2>Who believe in us</h2>
+        <h1>Partners and friends.</h1>
+        <div className={styles.PartnersList}>
+          <a href="https://th8ta.org" target="_blank" rel="noopener noreferrer">
+            <img src={th8taLogo} alt="th8ta" />
+          </a>
+          <a href="https://th8ta.org" target="_blank" rel="noopener noreferrer">
+            <img src={th8taLogo} alt="th8ta" />
+          </a>
+          <a href="https://th8ta.org" target="_blank" rel="noopener noreferrer">
+            <img src={th8taLogo} alt="th8ta" />
           </a>
         </div>
       </div>

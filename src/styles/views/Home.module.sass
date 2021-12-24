@@ -67,6 +67,7 @@
 
 .LanguageSection
   padding: variables.$side-padding (variables.$side-padding * 2)
+    top: calc(variables.$side-padding / 2)
 
   h1
     font-size: 2.9em
@@ -251,3 +252,43 @@
   margin-left: -(variables.$side-padding)
   user-select: none
   width: calc(100% + variables.$side-padding)
+
+.Partners
+  padding: variables.$side-padding
+
+  h1, h2
+    margin: 0
+    line-height: 1.15em
+    text-align: center
+
+  h2
+    color: variables.$light-text
+    text-transform: uppercase
+    font-size: 1em
+    font-weight: 500
+
+  h1
+    font-weight: 600
+    font-size: 2.9em
+    margin-bottom: 1.2em
+
+  .PartnersList
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    align-items: center
+    justify-content: center
+    gap: 4em 1em
+
+    a
+      height: 50px
+      text-decoration: none
+      transition: all .23s ease-in-out
+
+      img
+        display: block
+        margin: 0 auto
+        height: 100%
+        user-select: none
+
+      &:hover
+        opacity: .7
