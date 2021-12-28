@@ -167,6 +167,11 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.0.7.tgz#8d75d3b6a872ab97ab73e3b4173d56dbb2991917"
   integrity sha512-frEWtbf+q8Oz4e2UqKJrNssk6DZ6/NLCQXn5/ORWE9dPAfe9XS6aK5FRZ6DuEPmmKd5gOoRkKJFFz5nYd+TeyQ==
 
+"@primer/octicons-react@^16.2.0":
+  version "16.2.0"
+  resolved "https://registry.yarnpkg.com/@primer/octicons-react/-/octicons-react-16.2.0.tgz#702f59169dd763dc03e613b0e881aa715da37a5c"
+  integrity sha512-943t5kkVRt+/hxVnKS27xweUp4lXFxwJaTrsit1C1xBB4kqdjzmYGpU84zwKsNyyV2Ch7may3umKjbI/mFBPPQ==
+
 "@types/json-schema@^7.0.8":
   version "7.0.9"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.9.tgz#97edc9037ea0c38585320b28964dde3b39e4660d"

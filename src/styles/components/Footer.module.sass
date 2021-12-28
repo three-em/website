@@ -1,0 +1,70 @@
+@use "../variables"
+
+=flexDef
+  display: flex
+  align-items: center
+
+.Footer
+  $topPadding: 2.6em
+  background-color: #000
+  padding-bottom: $topPadding
+
+  .CurveFill
+    $fillHeight: 45px
+    background-color: #fff
+    width: 100%
+    height: $fillHeight
+    border-bottom-left-radius: $fillHeight
+    border-bottom-right-radius: $fillHeight
+    margin-bottom: $topPadding
+
+  .Separate
+    height: 1px
+    margin: 2.3em 2.25em
+    background-color: #2E2E2E
+
+  .Links
+    +flexDef
+    justify-content: space-between
+    padding: 0 variables.$side-padding
+
+    a
+      color: #fff
+      text-decoration: none
+      font-weight: 400
+      margin: 0 .65em
+      transition: all .23s ease-in-out
+
+      &:hover
+        opacity: .9
+    
+    .Menu
+      +flexDef
+
+      .Logo
+        width: 2em
+        height: 2em
+        margin-right: 1em
+        user-select: none
+    
+      a
+        font-size: .9em
+
+    .Social
+      +flexDef
+
+      a
+        font-size: 1.1em
+
+        svg
+          font-size: 1em
+          width: 1em
+          height: 1em
+
+  .Copyright
+    font-size: .7em
+    color: #CDCDCD
+    font-weight: 500
+    margin: 0
+    text-align: right
+    padding: 0 variables.$side-padding
