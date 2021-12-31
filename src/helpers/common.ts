@@ -25,14 +25,7 @@ export const calculateGlobalMean = async (
     (item) => item.benchmark[key2]?.mean
   );
 
-  const key1BenchmarksMax = benchmarks.map(
-    (item) => item.benchmark[key1]?.mean
-  );
-  const key2BenchmarksMax = benchmarks.map(
-    (item) => item.benchmark[key2]?.mean
-  );
-
-  const highest = Math.max(...[...key1BenchmarksMax, ...key2BenchmarksMax]);
+  const highest = Math.max(...[...key1BenchmarksMean, ...key2BenchmarksMean]);
 
   return {
     [`${key1}`]: getAverage(key1BenchmarksMean),
