@@ -1,5 +1,5 @@
 import { ArrowRightIcon, CodeIcon, DownloadIcon } from "@iconicicons/react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import codeImage from "../assets/code.svg";
 import codeTerminalImage from "../assets/code-terminal.svg";
 import asLogo from "../assets/language-icons/as.svg";
@@ -14,8 +14,18 @@ import FeatureCard from "../components/FeatureCard";
 import Typed from "typed.js";
 import Head from "next/head";
 import styles from "../styles/views/Home.module.sass";
+import {
+  calculateGlobalMean,
+  calculateHundredPercent,
+  GlobalMean
+} from "../helpers/common";
 
 export default function Home() {
+  const [jsBenchmark, setJsBenchmark] = useState<GlobalMean>({
+    js: 0,
+    smartweaveJs: 0,
+    highest: 0
+  });
   useEffect(() => {
     const options = {
       strings: [
@@ -35,6 +45,10 @@ export default function Home() {
       backDelay: 2000,
       smartBackspace: false
     };
+
+    calculateGlobalMean("js", "smartweaveJs").then((result) => {
+      setJsBenchmark(result);
+    });
 
     const typed = new Typed("#typed", options);
 
@@ -165,21 +179,37 @@ export default function Home() {
         <div className={styles.Demonstrate + " " + styles.SpeedData}>
           <span>3em</span>
           <div className={styles.SpeedGraph}>
-            <div className={styles.Filler} style={{ width: "30%" }} />
+            <div
+              className={styles.Filler}
+              style={{
+                width: `${calculateHundredPercent(
+                  jsBenchmark.js,
+                  jsBenchmark.highest
+                )}%`
+              }}
+            />
           </div>
           <span>SmartWeave</span>
           <div className={styles.SpeedGraph}>
-            <div className={styles.Filler} style={{ width: "75%" }} />
+            <div
+              className={styles.Filler}
+              style={{
+                width: `${calculateHundredPercent(
+                  jsBenchmark.smartweaveJs,
+                  jsBenchmark.highest
+                )}%`
+              }}
+            />
           </div>
           <div className={styles.Datas}>
             <div className={styles.Cell}>
               <span>3EM</span>
-              <h1>2.20s</h1>
+              <h1>{jsBenchmark.js.toFixed(2)}s</h1>
             </div>
             <div className={styles.Separator} />
             <div className={styles.Cell}>
               <span>SmartWeave</span>
-              <h1>8.13s</h1>
+              <h1>{jsBenchmark.smartweaveJs.toFixed(2)}s</h1>
             </div>
           </div>
         </div>
