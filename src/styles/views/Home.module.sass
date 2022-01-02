@@ -66,6 +66,7 @@
         margin-right: 2em
 
 .LanguageSection
+  position: relative
   padding: variables.$side-padding (variables.$side-padding * 2)
     top: calc(variables.$side-padding / 2)
 
@@ -110,7 +111,22 @@
     margin: 0 auto
     user-select: none
 
+  .Gradient1
+    width: 425px
+    height: 740px
+    left: -10%
+    top: -20%
+    background: radial-gradient(50% 50% at 43.76% 50%, rgba(58, 166, 227, 0.3) 0%, rgba(58, 166, 227, 0) 100%)
+
+  .Gradient2
+    width: 400px
+    height: 600px
+    right: -14%
+    top: 2em
+    background: radial-gradient(45.5% 45.68% at 56.59% 55.91%, rgba(126, 108, 218, 0.3) 0%, rgba(126, 108, 218, 0) 100%)
+
 .Features
+  position: relative
   padding: 0 variables.$side-padding
   overflow-x: auto
   -ms-overflow-style: none
@@ -129,6 +145,7 @@
       width: 4em
 
 .Explainer
+  position: relative
   display: flex
   align-items: center
   justify-content: space-between
@@ -187,6 +204,20 @@
   .Demonstrate
     position: relative
     width: $contentWidth
+
+  .Gradient3
+    width: 425px
+    height: 740px
+    left: -10%
+    top: 0
+    background: radial-gradient(50% 50% at 43.76% 50%, rgba(58, 166, 227, 0.3) 0%, rgba(58, 166, 227, 0) 100%)
+
+  .Gradient4
+    width: 400px
+    height: 600px
+    left: -14%
+    top: 2em
+    background: radial-gradient(45.5% 45.68% at 56.59% 55.91%, rgba(126, 108, 218, 0.3) 0%, rgba(126, 108, 218, 0) 100%)
 
 .SpeedData
   span
@@ -292,3 +323,7 @@
 
       &:hover
         opacity: .7
+
+.Gradient1, .Gradient2, .Gradient3, .Gradient4
+  position: absolute
+  z-index: -1

@@ -78,6 +78,8 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.LanguageSection}>
+        <div className={styles.Gradient1} />
+        <div className={styles.Gradient2} />
         <h1 className={styles.SecondaryTitle}>Permanent contracts.</h1>
         <h1>Any programming language.</h1>
         <p>
@@ -143,6 +145,8 @@ export default function Home() {
         </div>
       </div>
       <div className={styles.Explainer}>
+        <div className={styles.Gradient3} />
+        <div className={styles.Gradient4} />
         <div className={styles.Content}>
           <h3>Performance first</h3>
           <h1>Fast contracts.</h1>
