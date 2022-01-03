@@ -36,7 +36,7 @@ export default function Nav() {
           </a>
           <Button className={styles.MenuItem} secondary>
             <DownloadIcon />
-            Download
+            Get Started
           </Button>
         </div>
       </div>
