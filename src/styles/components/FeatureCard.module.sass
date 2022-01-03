@@ -9,6 +9,10 @@
   background-color: variables.$blue-theme
   box-shadow: variables.$standard-shadow
 
+  @media screen and (max-width: variables.$mobile-width)
+    width: 247.5px
+    height: 326.25px
+
   &.Purple
     background-color: variables.$purple-theme
 
@@ -44,11 +48,14 @@
       margin: 0
       text-align: justify
 
+      @media screen and (max-width: variables.$mobile-width)
+        font-size: .75em
+
   .GradientBackground
     position: absolute
     left: 0
     right: 0
-    bottom: 0
+    bottom: -2px
     top: 15%
     background: linear-gradient(180deg, rgba(#000, 0) 0%, #000 100%)
     z-index: 5

@@ -15,21 +15,37 @@
     width: calc(100vw - #{variables.$side-padding * 2})
     transform: translate(-50%, -50%)
 
+    @media screen and (max-width: variables.$mobile-width)
+      display: block
+
     img
       width: 45%
       user-select: none
 
+      @media screen and (max-width: variables.$mobile-width)
+        width: 100%
+        margin-top: 4.5em
+
     .LandingText
       width: 45%
+
+      @media screen and (max-width: variables.$mobile-width)
+        width: 100%
 
       h1, h2
         color: #000
         line-height: 1.1em
 
+        @media screen and (max-width: variables.$mobile-width)
+          text-align: center
+
       h1
         font-size: 3.8em
         font-weight: 600
         margin: 0
+
+        @media screen and (max-width: variables.$mobile-width)
+          font-size: 2.5em
 
       h2
         display: flex
@@ -37,6 +53,10 @@
         font-size: 1.65em
         font-weight: 500
         margin: .5em 0
+
+        @media screen and (max-width: variables.$mobile-width)
+          font-size: 1.25em
+          justify-content: center
 
         .ContractLanguage
           position: relative
@@ -65,14 +85,28 @@
         color: variables.$light-text
         margin: 1em 0
           bottom: 1.65em
+          
+        @media screen and (max-width: variables.$mobile-width)
+          text-align: center
 
-      button:first-child
-        margin-right: 2em
+      .ButtonWrapper
+        display: flex
+
+        @media screen and (max-width: variables.$mobile-width)
+          justify-content: center
+
+        button:first-child
+          margin-right: 2em
 
 .LanguageSection
   position: relative
   padding: variables.$side-padding (variables.$side-padding * 2)
     top: calc(variables.$side-padding / 2)
+
+  @media screen and (max-width: variables.$mobile-width)
+    padding:
+      left: variables.$side-padding
+      right: variables.$side-padding
 
   h1
     font-size: 2.9em
@@ -85,6 +119,9 @@
     &.SecondaryTitle
       color: variables.$light-text
 
+    @media screen and (max-width: variables.$mobile-width)
+      font-size: 2em
+
   p
     font-size: 1em
     font-weight: 400
@@ -92,6 +129,9 @@
     margin: 0
       top: 1.75em
     text-align: center
+
+    @media screen and (max-width: variables.$mobile-width)
+      font-size: .88em
 
   .LanguageIcons
     display: flex
@@ -137,6 +177,9 @@
   scrollbar-width: none
   padding-bottom: 3em
 
+  @media screen and (max-width: variables.$mobile-width)
+    padding-top: 3em
+
   &::-webkit-scrollbar
     display: none
 
@@ -148,6 +191,9 @@
     .FeatureSpacer
       height: 100%
       width: 4em
+      
+      @media screen and (max-width: variables.$mobile-width)
+        width: 3em
 
 .Explainer
   position: relative
@@ -158,8 +204,14 @@
     bottom: 0
   $contentWidth: 46%
 
+  @media screen and (max-width: variables.$mobile-width)
+    display: block
+
   .Content
     width: $contentWidth
+
+    @media screen and (max-width: variables.$mobile-width)
+      width: 100%
 
     h1, h2, h3
       margin: 0
@@ -171,9 +223,15 @@
       font-size: 1em
       font-weight: 500
 
+      @media screen and (max-width: variables.$mobile-width)
+        font-size: .82em
+
     h2, h1
       font-weight: 600
       font-size: 2.9em
+
+      @media screen and (max-width: variables.$mobile-width)
+        font-size: 2.2em
 
     h1
       color: variables.$blue-theme
@@ -186,6 +244,9 @@
       margin: 1.1em 0
       line-height: 1.6em
       letter-spacing: 0.03em
+
+      @media screen and (max-width: variables.$mobile-width)
+        font-size: .88em
 
     a
       font-size: 1.1em
@@ -210,6 +271,10 @@
     position: relative
     width: $contentWidth
 
+    @media screen and (max-width: variables.$mobile-width)
+      width: 100%
+      margin: 3.4em 0
+
   .Gradient3
     width: 425px
     height: 740px
@@ -217,12 +282,18 @@
     top: 0
     background: radial-gradient(50% 50% at 43.76% 50%, rgba(58, 166, 227, 0.3) 0%, rgba(58, 166, 227, 0) 100%)
 
+    @media screen and (max-width: variables.$mobile-width)
+      opacity: .6
+
   .Gradient4
     width: 400px
     height: 600px
     left: -14%
     top: 2em
     background: radial-gradient(45.5% 45.68% at 56.59% 55.91%, rgba(126, 108, 218, 0.3) 0%, rgba(126, 108, 218, 0) 100%)
+    
+    @media screen and (max-width: variables.$mobile-width)
+      opacity: .6
 
 .SpeedData
   span
@@ -233,6 +304,9 @@
     text-transform: uppercase
     margin: 0
       bottom: .37em
+
+    @media screen and (max-width: variables.$mobile-width)
+      font-size: .67em
 
   .SpeedGraph
     position: relative
@@ -276,6 +350,9 @@
         margin: 0
         font-weight: 500
         line-height: 1.7em
+
+        @media screen and (max-width: variables.$mobile-width)
+          font-size: 2.5em
 
       &:first-child
         border-right: 1px solid $borderColor

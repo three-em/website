@@ -96,7 +96,7 @@ export default function Home() {
               Deploy powerful contracts in a minute and make them permanent and
               free for your users.
             </p>
-            <div style={{ display: "flex" }}>
+            <div className={styles.ButtonWrapper}>
               <Button secondary>
                 <DownloadIcon />
                 Get Started
