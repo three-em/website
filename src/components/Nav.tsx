@@ -2,7 +2,7 @@ import { DownloadIcon } from "@iconicicons/react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Button from "./Button";
-import styles from "../styles/Components/Nav.module.sass";
+import styles from "../styles/components/Nav.module.sass";
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
