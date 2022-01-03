@@ -20,7 +20,7 @@ export default function Footer() {
           </a>
         </div>
         <div className={styles.Social}>
-          <a href="/">
+          <a href="https://discord.gg/HTkc6CZ2xv">
             <CommentIcon />
           </a>
           <a href="https://github.com/three-em/3em">

@@ -9,11 +9,11 @@ export default function FeatureCard({
 }: Props) {
   return (
     <div className={styles.Card + " " + (purple ? styles.Purple : "")}>
-      <img
-        src={sampleFeatureImage}
-        alt="feature preview"
-        className={styles.FeaturePreview}
-      />
+      {/*<img*/}
+      {/*  src={sampleFeatureImage}*/}
+      {/*  alt="feature preview"*/}
+      {/*  className={styles.FeaturePreview}*/}
+      {/*/>*/}
       <div className={styles.GradientBackground} />
       <div className={styles.Content}>
         <div className={styles.Title}>
