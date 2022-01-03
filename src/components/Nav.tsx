@@ -28,10 +28,7 @@ export default function Nav() {
           </a>
         </Link>
         <div className={styles.Menu}>
-          <a
-            href="https://verto.notion.site/3EM-ffcceaeba99145eabb9d42834b426944"
-            className={styles.MenuItem}
-          >
+          <a href="https://github.com/three-em/3em" className={styles.MenuItem}>
             Docs
           </a>
           <a href="https://discord.gg/HTkc6CZ2xv" className={styles.MenuItem}>

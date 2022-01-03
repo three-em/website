@@ -108,10 +108,7 @@ export default function Home() {
               </Button>
               <Button
                 onClick={() =>
-                  window.open(
-                    "https://verto.notion.site/3EM-ffcceaeba99145eabb9d42834b426944",
-                    "_blank"
-                  )
+                  window.open("https://github.com/three-em/3em", "_blank")
                 }
               >
                 <CodeIcon />
@@ -225,7 +222,7 @@ export default function Home() {
             matter how many new interactions or foreign calls there may be.
           </p>
           <a
-            href="https://verto.notion.site/3EM-ffcceaeba99145eabb9d42834b426944"
+            href="https://github.com/three-em/3em"
             target="_blank"
             rel="noopener noreferrer"
           >
