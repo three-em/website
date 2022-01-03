@@ -31,7 +31,7 @@ export default function Nav() {
           <a href="https://docs.3em.dev" className={styles.MenuItem}>
             Docs
           </a>
-          <a href="https://chat.3em.dev" className={styles.MenuItem}>
+          <a href="https://discord.gg/HTkc6CZ2xv" className={styles.MenuItem}>
             Chat
           </a>
           <Button className={styles.MenuItem} secondary>

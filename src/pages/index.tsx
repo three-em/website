@@ -30,9 +30,9 @@ export default function Home() {
 
   useEffect(() => {
     const strings: Record<string, string> = {
+      Solidity: "https://soliditylang.org/",
       WASM: "https://webassembly.org/",
       Rust: "https://www.rust-lang.org/",
-      Solidity: "https://soliditylang.org/",
       Go: "https://go.dev/",
       JavaScript: "https://www.javascript.com/",
       TypeScript: "https://www.typescriptlang.org/",
@@ -192,14 +192,14 @@ export default function Home() {
         <div className={styles.Gradient3} />
         <div className={styles.Gradient4} />
         <div className={styles.Content}>
-          <h3>Performance first</h3>
+          <h3>Security First, Performance Second</h3>
           <h1>Fast contracts.</h1>
           <h2>Supercharged runtime.</h2>
           <p>
             Faster execution means faster response for you, and your users. By
-            prioritizing performance, we make sure evaluating states is
-            something that happens in seconds, no matter how many new
-            interactions there could be.
+            prioritizing security & performance, we make sure evaluating states
+            is something that happens in seconds without having the risk of
+            malicious code, no matter how many new interactions there could be.
           </p>
           <a
             href="https://docs.3em.dev"
@@ -271,21 +271,21 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <div className={styles.Partners}>
-        <h2>Who believe in us</h2>
-        <h1>Partners and friends.</h1>
-        <div className={styles.PartnersList}>
-          <a href="https://th8ta.org" target="_blank" rel="noopener noreferrer">
-            <img src={th8taLogo} alt="th8ta" />
-          </a>
-          <a href="https://th8ta.org" target="_blank" rel="noopener noreferrer">
-            <img src={th8taLogo} alt="th8ta" />
-          </a>
-          <a href="https://th8ta.org" target="_blank" rel="noopener noreferrer">
-            <img src={th8taLogo} alt="th8ta" />
-          </a>
-        </div>
-      </div>
+      {/*<div className={styles.Partners}>*/}
+      {/*  <h2>Who believe in us</h2>*/}
+      {/*  <h1>Partners and friends.</h1>*/}
+      {/*  <div className={styles.PartnersList}>*/}
+      {/*    <a href="https://th8ta.org" target="_blank" rel="noopener noreferrer">*/}
+      {/*      <img src={th8taLogo} alt="th8ta" />*/}
+      {/*    </a>*/}
+      {/*    <a href="https://th8ta.org" target="_blank" rel="noopener noreferrer">*/}
+      {/*      <img src={th8taLogo} alt="th8ta" />*/}
+      {/*    </a>*/}
+      {/*    <a href="https://th8ta.org" target="_blank" rel="noopener noreferrer">*/}
+      {/*      <img src={th8taLogo} alt="th8ta" />*/}
+      {/*    </a>*/}
+      {/*  </div>*/}
+      {/*</div>*/}
     </>
   );
 }
