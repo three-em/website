@@ -33,11 +33,12 @@ export default function Home() {
       Solidity: "https://soliditylang.org/",
       WASM: "https://webassembly.org/",
       Rust: "https://www.rust-lang.org/",
-      Go: "https://go.dev/",
+      "C++": "https://www.cplusplus.com/",
       JavaScript: "https://www.javascript.com/",
-      TypeScript: "https://www.typescriptlang.org/",
+      C: "https://en.wikipedia.org/wiki/C_(programming_language)",
       AssemblyScript: "https://www.assemblyscript.org/",
-      Zig: "https://ziglang.org/"
+      Zig: "https://ziglang.org/",
+      Vyper: "https://vyper.readthedocs.io/en/stable/"
     };
     const options = {
       strings: Object.keys(strings),
