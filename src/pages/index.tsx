@@ -97,7 +97,12 @@ export default function Home() {
               free for your users.
             </p>
             <div className={styles.ButtonWrapper}>
-              <Button secondary>
+              <Button
+                secondary
+                onClick={() =>
+                  window.open("https://github.com/three-em/3em", "_blank")
+                }
+              >
                 <DownloadIcon />
                 Get Started
               </Button>

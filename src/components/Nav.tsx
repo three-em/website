@@ -34,7 +34,13 @@ export default function Nav() {
           <a href="https://discord.gg/HTkc6CZ2xv" className={styles.MenuItem}>
             Chat
           </a>
-          <Button className={styles.MenuItem} secondary>
+          <Button
+            className={styles.MenuItem}
+            secondary
+            onClick={() =>
+              window.open("https://github.com/three-em/3em", "_blank")
+            }
+          >
             <DownloadIcon />
             Get Started
           </Button>
