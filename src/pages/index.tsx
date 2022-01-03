@@ -9,6 +9,11 @@ import rustLogo from "../assets/language-icons/rust.svg";
 import solidityLogo from "../assets/language-icons/solidity.svg";
 import tsLogo from "../assets/language-icons/ts.svg";
 import th8taLogo from "../assets/partners/th8ta.svg";
+import wasmFeaturePreview from "../assets/features/wasm.svg";
+import sandboxFeaturePreview from "../assets/features/sandbox.svg";
+import smartweaveFeaturePreview from "../assets/features/smartweave.svg";
+import cliFeaturePreview from "../assets/features/cli.svg";
+import deterministicFeaturePreview from "../assets/features/deterministic.svg";
 import Button from "../components/Button";
 import FeatureCard from "../components/FeatureCard";
 import Typed from "typed.js";
@@ -163,6 +168,7 @@ export default function Home() {
           <FeatureCard
             title="Sandboxed"
             subtitle="Secure runtime"
+            image={sandboxFeaturePreview}
             description="A fully secure & modern runtime for smart contract evaluation using isolated environments where malicious code cannot be evaluated."
           />
           <div className={styles.FeatureSpacer} />
@@ -170,12 +176,14 @@ export default function Home() {
             purple
             title="Deterministic"
             subtitle="Improved execution"
+            image={deterministicFeaturePreview}
             description="Random seeding, polyfills, and more strategies applied to your execution, making it nearly impossible for contracts to have non-deterministic behavior."
           />
           <div className={styles.FeatureSpacer} />
           <FeatureCard
             title="SmartWeave Compatible"
             subtitle="Community standards"
+            image={smartweaveFeaturePreview}
             description="There's no learning curve; with built-in support for all SmartWeave standards, backward compatability is guaranteed."
           />
           <div className={styles.FeatureSpacer} />
@@ -183,6 +191,7 @@ export default function Home() {
             purple
             title="CLI and Library"
             subtitle="Multiple platforms"
+            image={cliFeaturePreview}
             description="Not only for users but for developers, we prioritized our codebase to be used as an external library for JS, WASM, and Rust applications."
           />
           {/*<div className={styles.FeatureSpacer} />*/}
