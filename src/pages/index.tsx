@@ -197,9 +197,9 @@ export default function Home() {
           <h2>Supercharged runtime.</h2>
           <p>
             Faster execution means faster response for you, and your users. By
-            prioritizing security & performance, we make sure evaluating states
-            is something that happens in seconds without having the risk of
-            malicious code, no matter how many new interactions there could be.
+            prioritizing security, we ensure evaluating states is something that
+            happens in seconds without the risk of malicious code, no matter how
+            many new interactions there may be.
           </p>
           <a
             href="https://docs.3em.dev"
