@@ -93,8 +93,8 @@ export default function Home() {
               </div>
             </h2>
             <p>
-              Deploy powerful contracts in a minute and make them permanent and
-              free for your users.
+              Run SmartWeave contracts in a matter of seconds, with support for
+              multiple langauges.
             </p>
             <div className={styles.ButtonWrapper}>
               <Button
