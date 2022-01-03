@@ -12,6 +12,8 @@ import th8taLogo from "../assets/partners/th8ta.svg";
 import wasmFeaturePreview from "../assets/features/wasm.svg";
 import sandboxFeaturePreview from "../assets/features/sandbox.svg";
 import smartweaveFeaturePreview from "../assets/features/smartweave.svg";
+import cliFeaturePreview from "../assets/features/cli.svg";
+import deterministicFeaturePreview from "../assets/features/deterministic.svg";
 import Button from "../components/Button";
 import FeatureCard from "../components/FeatureCard";
 import Typed from "typed.js";
@@ -175,6 +177,7 @@ export default function Home() {
             title="Deterministic"
             subtitle="Improved execution"
             description="Random seeding, polyfills, and more strategies applied to your execution, making it impossible for contracts to have non-deterministic behaviors"
+            image={deterministicFeaturePreview}
           />
           <div className={styles.FeatureSpacer} />
           <FeatureCard
@@ -189,6 +192,7 @@ export default function Home() {
             title="CLI And Library"
             subtitle="Multiple platforms"
             description="Not only for users but for developers, we have prioritized our codebase to be used as an external library for JS, WASM, and Rust applications."
+            image={cliFeaturePreview}
           />
           {/*<div className={styles.FeatureSpacer} />*/}
           {/*<FeatureCard />*/}
