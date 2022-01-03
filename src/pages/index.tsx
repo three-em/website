@@ -93,7 +93,7 @@ export default function Home() {
             <div style={{ display: "flex" }}>
               <Button secondary>
                 <DownloadIcon />
-                Download
+                Get Started
               </Button>
               <Button>
                 <CodeIcon />
@@ -107,11 +107,11 @@ export default function Home() {
       <div className={styles.LanguageSection}>
         <div className={styles.Gradient1} />
         <div className={styles.Gradient2} />
-        <h1 className={styles.SecondaryTitle}>Permanent contracts.</h1>
-        <h1>Any programming language.</h1>
+        <h1 className={styles.SecondaryTitle}>Immutable contracts.</h1>
+        <h1>Language flexibility.</h1>
         <p>
-          Use your favorite programming language to write contracts and decide
-          which fits your project better.
+          Use your favorite programming language to write secure smart
+          contracts.
         </p>
         <div className={styles.LanguageIcons}>
           <img
@@ -163,27 +163,27 @@ export default function Home() {
           <FeatureCard
             title="Sandboxed"
             subtitle="Secure runtime"
-            description="A fully secure & modern runtime for smart contract evaluation using isolated environments where malicious code is impossible to exist."
+            description="A fully secure & modern runtime for smart contract evaluation using isolated environments where malicious code cannot be evaluated."
           />
           <div className={styles.FeatureSpacer} />
           <FeatureCard
             purple
             title="Deterministic"
             subtitle="Improved execution"
-            description="Random seeding, polyfills, and more strategies applied to your execution, making it impossible for contracts to have non-deterministic behaviors"
+            description="Random seeding, polyfills, and more strategies applied to your execution, making it nearly impossible for contracts to have non-deterministic behavior."
           />
           <div className={styles.FeatureSpacer} />
           <FeatureCard
             title="SmartWeave Compatible"
-            subtitle="Community Standards"
-            description="There's no learning curve: with built-in support for SmartWeave standards, backward compatability is out of the box. "
+            subtitle="Community standards"
+            description="There's no learning curve; with built-in support for all SmartWeave standards, backward compatability is guaranteed."
           />
           <div className={styles.FeatureSpacer} />
           <FeatureCard
             purple
-            title="CLI And Library"
+            title="CLI and Library"
             subtitle="Multiple platforms"
-            description="Not only for users but for developers, we have prioritized our codebase to be used as an external library for JS, WASM, and Rust applications."
+            description="Not only for users but for developers, we prioritized our codebase to be used as an external library for JS, WASM, and Rust applications."
           />
           {/*<div className={styles.FeatureSpacer} />*/}
           {/*<FeatureCard />*/}
@@ -197,10 +197,10 @@ export default function Home() {
           <h1>Fast contracts.</h1>
           <h2>Supercharged runtime.</h2>
           <p>
-            Faster execution means faster response for you, and your users. By
-            prioritizing security, we ensure evaluating states is something that
-            happens in seconds without the risk of malicious code, no matter how
-            many new interactions there may be.
+            Faster execution means faster responses for you, and your users. By
+            prioritizing security, we can ensure evaluating states is something
+            that happens in seconds without the risk of malicious code, no
+            matter how many new interactions or foreign calls there may be.
           </p>
           <a
             href="https://docs.3em.dev"
@@ -254,13 +254,13 @@ export default function Home() {
           <img src="/tiles.png" alt="arweave" className={styles.ArTiles} />
         </div>
         <div className={styles.Content}>
-          <h3>Arweave quality</h3>
-          <h1>Permanent data.</h1>
-          <h2>Immutable contract.</h2>
+          <h3>Arweave = home</h3>
+          <h1>Contract Data,</h1>
+          <h2>Made Permanent</h2>
           <p>
-            With your source code and interactions being saved in Arweave, it
-            only means one thing: a secure, global, community-owned storage for
-            lazy evaluation.
+            With your source code and interactions being stored on the permaweb,
+            it only means one thing: a secure, cheap, community-owned hard drive
+            for lazy evaluation.
           </p>
           <a
             href="https://arweave.org"
