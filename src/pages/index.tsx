@@ -175,6 +175,7 @@ export default function Home() {
           <div className={styles.FeatureSpacer} />
           <FeatureCard
             title="SmartWeave Compatible"
+            subtitle="Community Standards"
             description="There's no learning curve: with built-in support for SmartWeave standards, backward compatability is out of the box. "
           />
           <div className={styles.FeatureSpacer} />
