@@ -9,6 +9,9 @@ import rustLogo from "../assets/language-icons/rust.svg";
 import solidityLogo from "../assets/language-icons/solidity.svg";
 import tsLogo from "../assets/language-icons/ts.svg";
 import th8taLogo from "../assets/partners/th8ta.svg";
+import wasmFeaturePreview from "../assets/features/wasm.svg";
+import sandboxFeaturePreview from "../assets/features/sandbox.svg";
+import smartweaveFeaturePreview from "../assets/features/smartweave.svg";
 import Button from "../components/Button";
 import FeatureCard from "../components/FeatureCard";
 import Typed from "typed.js";
@@ -164,6 +167,7 @@ export default function Home() {
             title="Sandboxed"
             subtitle="Secure runtime"
             description="A fully secure & modern runtime for smart contract evaluation using isolated environments where malicious code is impossible to exist."
+            image={sandboxFeaturePreview}
           />
           <div className={styles.FeatureSpacer} />
           <FeatureCard
@@ -177,6 +181,7 @@ export default function Home() {
             title="SmartWeave Compatible"
             subtitle="Community Standards"
             description="There's no learning curve: with built-in support for SmartWeave standards, backward compatability is out of the box. "
+            image={smartweaveFeaturePreview}
           />
           <div className={styles.FeatureSpacer} />
           <FeatureCard
