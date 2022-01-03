@@ -74,7 +74,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>3em</title>
+        <title>3em - The Web3 Execution Machine</title>
       </Head>
       <div className={styles.Landing}>
         <div className={styles.LandingContent}>
@@ -101,7 +101,9 @@ export default function Home() {
                 <DownloadIcon />
                 Get Started
               </Button>
-              <Button>
+              <Button
+                onClick={() => window.open("https://docs.3em.dev", "_blank")}
+              >
                 <CodeIcon />
                 Read more
               </Button>

@@ -1,11 +1,12 @@
-import { PropsWithChildren } from "react";
+import { MouseEventHandler, PropsWithChildren } from "react";
 import styles from "../styles/components/Button.module.sass";
 
 export default function Button({
   children,
   className,
   secondary,
-  disabled = false
+  disabled = false,
+  onClick
 }: PropsWithChildren<Props>) {
   return (
     <button
@@ -17,6 +18,7 @@ export default function Button({
         (className ?? "")
       }
       disabled={disabled}
+      onClick={onClick}
     >
       {children}
     </button>
@@ -27,4 +29,5 @@ interface Props {
   secondary?: boolean;
   className?: string;
   disabled?: boolean;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
