@@ -35,7 +35,8 @@ export default function Home() {
         "Go",
         "JavaScript",
         "TypeScript",
-        "AssemblyScript"
+        "AssemblyScript",
+        "Zig"
       ],
       loop: true,
       loopCount: 2,
@@ -145,15 +146,29 @@ export default function Home() {
       </div>
       <div className={styles.Features}>
         <div className={styles.FeaturesWrapper}>
-          <FeatureCard />
+          <FeatureCard
+            title="Sandboxed"
+            description="A fully secure & modern runtime for smart contract evaluation using isolated environments where malicious code is impossible to exist."
+          />
           <div className={styles.FeatureSpacer} />
-          <FeatureCard purple />
+          <FeatureCard
+            purple
+            title="Deterministic"
+            description="Random seeding, polyfills, and more strategies applied to your execution, making it impossible for contracts to have non-deterministic behaviors"
+          />
           <div className={styles.FeatureSpacer} />
-          <FeatureCard />
+          <FeatureCard
+            title="SmartWeave Compatible"
+            description="There's no learning curve: with built-in support for SmartWeave standards, backward compatability is out of the box. "
+          />
           <div className={styles.FeatureSpacer} />
-          <FeatureCard purple />
-          <div className={styles.FeatureSpacer} />
-          <FeatureCard />
+          <FeatureCard
+            purple
+            title="CLI And Library"
+            description="Not only for users but for developers, we have prioritized our codebase to be used as an external library for JS, WASM, and Rust applications."
+          />
+          {/*<div className={styles.FeatureSpacer} />*/}
+          {/*<FeatureCard />*/}
         </div>
       </div>
       <div className={styles.Explainer}>
@@ -162,10 +177,10 @@ export default function Home() {
           <h1>Fast contracts.</h1>
           <h2>Supercharged runtime.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
-            neque non excepturi, itaque dolore dolorum deleniti illum et
-            adipisci explicabo praesentium repellendus? Suscipit, autem atque
-            soluta perferendis repudiandae debitis est.
+            Faster execution means faster response for you, and your users. By
+            prioritizing performance, we make sure evaluating states is
+            something that happens in seconds, no matter how many new
+            interactions there could be.
           </p>
           <a
             href="https://docs.3em.dev"
@@ -223,10 +238,9 @@ export default function Home() {
           <h1>Permanent data.</h1>
           <h2>Immutable contract.</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
-            neque non excepturi, itaque dolore dolorum deleniti illum et
-            adipisci explicabo praesentium repellendus? Suscipit, autem atque
-            soluta perferendis repudiandae debitis est.
+            With your source code and interactions being saved in Arweave, it
+            only means one thing: a secure, global, community-owned storage for
+            lazy evaluation.
           </p>
           <a
             href="https://arweave.org"
