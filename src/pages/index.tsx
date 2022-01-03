@@ -93,7 +93,7 @@ export default function Home() {
             <div style={{ display: "flex" }}>
               <Button secondary>
                 <DownloadIcon />
-                Download
+                Get Started
               </Button>
               <Button>
                 <CodeIcon />
