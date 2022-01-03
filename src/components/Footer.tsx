@@ -15,15 +15,15 @@ export default function Footer() {
             className={styles.Logo}
           />
           <Link href="/">Home</Link>
-          <a href="/">Litepaper</a>
-          <a href="/">Legal</a>
-          <a href="/">License</a>
+          <a href="https://github.com/three-em/3em/blob/main/LICENSE">
+            License
+          </a>
         </div>
         <div className={styles.Social}>
           <a href="/">
             <CommentIcon />
           </a>
-          <a href="/">
+          <a href="https://github.com/three-em/3em">
             <MarkGithubIcon />
           </a>
         </div>

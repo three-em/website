@@ -1,7 +1,11 @@
 import sampleFeatureImage from "../assets/sample-feature.svg";
 import styles from "../styles/components/FeatureCard.module.sass";
 
-export default function FeatureCard({ purple = false }: Props) {
+export default function FeatureCard({
+  purple = false,
+  title,
+  description
+}: Props) {
   return (
     <div className={styles.Card + " " + (purple ? styles.Purple : "")}>
       <img
@@ -12,15 +16,9 @@ export default function FeatureCard({ purple = false }: Props) {
       <div className={styles.GradientBackground} />
       <div className={styles.Content}>
         <div className={styles.Title}>
-          <h1>Test title</h1>
-          <p>Test subtitle</p>
+          <h1>{title}</h1>
         </div>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis
-          voluptatum doloribus modi deserunt. Vel reiciendis numquam aut ullam
-          alias exercitationem odit, odio inventore, amet ipsam magni dicta sit
-          dolorem optio?
-        </p>
+        <p>{description}</p>
       </div>
     </div>
   );
@@ -28,4 +26,6 @@ export default function FeatureCard({ purple = false }: Props) {
 
 interface Props {
   purple?: boolean;
+  title: string;
+  description: string;
 }
