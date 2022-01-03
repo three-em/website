@@ -4,7 +4,8 @@ import styles from "../styles/components/FeatureCard.module.sass";
 export default function FeatureCard({
   purple = false,
   title,
-  description
+  description,
+  subtitle = ""
 }: Props) {
   return (
     <div className={styles.Card + " " + (purple ? styles.Purple : "")}>
@@ -17,6 +18,7 @@ export default function FeatureCard({
       <div className={styles.Content}>
         <div className={styles.Title}>
           <h1>{title}</h1>
+          <p>{subtitle}</p>
         </div>
         <p>{description}</p>
       </div>
@@ -28,4 +30,5 @@ interface Props {
   purple?: boolean;
   title: string;
   description: string;
+  subtitle?: string;
 }

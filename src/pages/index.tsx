@@ -162,12 +162,14 @@ export default function Home() {
         <div className={styles.FeaturesWrapper}>
           <FeatureCard
             title="Sandboxed"
+            subtitle="Secure runtime"
             description="A fully secure & modern runtime for smart contract evaluation using isolated environments where malicious code is impossible to exist."
           />
           <div className={styles.FeatureSpacer} />
           <FeatureCard
             purple
             title="Deterministic"
+            subtitle="Improved execution"
             description="Random seeding, polyfills, and more strategies applied to your execution, making it impossible for contracts to have non-deterministic behaviors"
           />
           <div className={styles.FeatureSpacer} />
@@ -179,6 +181,7 @@ export default function Home() {
           <FeatureCard
             purple
             title="CLI And Library"
+            subtitle="Multiple platforms"
             description="Not only for users but for developers, we have prioritized our codebase to be used as an external library for JS, WASM, and Rust applications."
           />
           {/*<div className={styles.FeatureSpacer} />*/}
