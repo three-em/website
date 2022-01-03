@@ -12,13 +12,13 @@ import th8taLogo from "../assets/partners/th8ta.svg";
 import Button from "../components/Button";
 import FeatureCard from "../components/FeatureCard";
 import Typed from "typed.js";
-import Head from "next/head";
-import styles from "../styles/views/Home.module.sass";
 import {
   calculateGlobalMean,
   calculateHundredPercent,
   GlobalMean
 } from "../helpers/common";
+import Head from "next/head";
+import styles from "../styles/views/Home.module.sass";
 
 export default function Home() {
   const [jsBenchmark, setJsBenchmark] = useState<GlobalMean>({
@@ -26,25 +26,32 @@ export default function Home() {
     smartweaveJs: 0,
     highest: 0
   });
+  const [currentURL, setCurrentURL] = useState("");
+
   useEffect(() => {
+    const strings: Record<string, string> = {
+      WASM: "https://webassembly.org/",
+      Rust: "https://www.rust-lang.org/",
+      Solidity: "https://soliditylang.org/",
+      Go: "https://go.dev/",
+      JavaScript: "https://www.javascript.com/",
+      TypeScript: "https://www.typescriptlang.org/",
+      AssemblyScript: "https://www.assemblyscript.org/",
+      Zig: "https://ziglang.org/"
+    };
     const options = {
-      strings: [
-        "WASM",
-        "Rust",
-        "Solidity",
-        "Go",
-        "JavaScript",
-        "TypeScript",
-        "AssemblyScript",
-        "Zig"
-      ],
+      strings: Object.keys(strings),
       loop: true,
       loopCount: 2,
 
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 2000,
-      smartBackspace: false
+      smartBackspace: false,
+
+      preStringTyped(arrayPos: number) {
+        setCurrentURL(strings[Object.keys(strings)[arrayPos]]);
+      }
     };
 
     calculateGlobalMean("js", "smartweaveJs").then((result) => {
@@ -70,7 +77,12 @@ export default function Home() {
             <h2>
               Write contracts in{" "}
               <div className={styles.ContractLanguage}>
-                <span id="typed" />
+                <a
+                  href={currentURL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  id="typed"
+                />
                 <div className={styles.Selector} />
               </div>
             </h2>
