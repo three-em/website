@@ -268,6 +268,54 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <div className={styles.Explainer}>
+        <div className={styles.Gradient3} />
+        <div className={styles.Gradient4} />
+        <div className={styles.Content}>
+          <h3 className={styles.Pill} id="library">
+            new!
+          </h3>
+          <h1>Javascript Library</h1>
+          <h2>A new Frontier</h2>
+          <p>
+            Made for Developers, 3EM can be used in both client and server side.
+            With our JS library, 3EM can be integrated in a variety of
+            applications while still keeping the integrity of our core
+            principles: Blazingly fast, multi-language, secured & deterministic
+            smart contract executor.
+          </p>
+          <a
+            href="https://github.com/three-em/3em"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Started
+            <ArrowRightIcon />
+          </a>
+        </div>
+        <div className={styles.Demonstrate + " " + styles.SpeedData}>
+          <span>TODO</span>
+          <div className={styles.SpeedGraph}>
+            <div
+              className={styles.Filler}
+              style={{
+                width: `30%`
+              }}
+            />
+          </div>
+          <span>REPLACE WITH RUNTIME ICONS</span>
+          <div className={styles.SpeedGraph}>
+            <div
+              className={styles.Filler}
+              style={{
+                width: `80%`
+              }}
+            />
+          </div>
+        </div>
+      </div>
+
       <div className={styles.Explainer}>
         <div className={styles.Demonstrate}>
           <img src="/tiles.png" alt="arweave" className={styles.ArTiles} />
