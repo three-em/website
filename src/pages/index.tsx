@@ -270,8 +270,7 @@ export default function Home() {
       </div>
 
       <div className={styles.Explainer}>
-        <div className={styles.Gradient3} />
-        <div className={styles.Gradient4} />
+        <div className={styles.Gradient4 + " " + styles.Right} />
         <div className={styles.Content}>
           <h3 className={styles.Pill} id="library">
             new!
