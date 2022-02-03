@@ -1,94 +1,92 @@
 @use "../variables"
-.Wrapper
-  position: fixed
-  top: 0
-  left: 0
-  right: 0
+
+.Banner
   display: flex
-  flex-direction: column
-  z-index: 99
+  align-items: center
+  vertical-align: middle
+  justify-content: center
+  padding: 0.6em
+  background-color: #3AA6E3FF
+  color: #FFFFFFFF
+  text-decoration: none
 
-  .Banner
+  > * + *
+    margin-left: 0.5em
+  
+.Nav
+  position: sticky
+  top: 0
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 1em 2.5em
+  z-index: 1000
+  transition: all .23s ease-in-out
+
+  &.Scrolled
+    background-color: rgba(#fff, .8)
+    backdrop-filter: blur(2px)
+
+  .Logo
     display: flex
     align-items: center
-    vertical-align: middle
-    justify-content: center
-    width: 100%
-    padding: 0.6em
-    background-color: #3AA6E3FF
-    color: #FFFFFFFF
-    text-decoration: none
-
-    > * + *
-      margin-left: 0.5em
-
-  .Nav
-    display: flex
-    align-items: center
-    justify-content: space-between
-    padding: 1em 2.5em
-    z-index: 1000
+    cursor: pointer
     transition: all .23s ease-in-out
 
-    &.Scrolled
-      background-color: rgba(#fff, .8)
-      backdrop-filter: blur(2px)
+    img
+      width: 2em
+      height: 2em
+      user-select: none
 
-    .Logo
-      display: flex
-      align-items: center
-      cursor: pointer
+    &:hover
+      opacity: .9
+
+    &:active
+      transform: scale(.94)
+
+  .Menu
+    display: flex
+    align-items: center
+
+    .MenuItem
+      margin: 0 2em
+
+      @media screen and (max-width: variables.$mobile-width)
+        margin: 0 .7em
+
+      &:last-child
+        margin-right: 0
+
+    a
+      display: block
+      font-size: 1em
+      font-weight: 500
+      text-decoration: none
+      color: variables.$light-text
       transition: all .23s ease-in-out
 
-      img
-        width: 2em
-        height: 2em
-        user-select: none
-
       &:hover
-        opacity: .9
+        opacity: .87
 
-      &:active
-        transform: scale(.94)
+.NavGradientWrapper
+  position: relative
+  width: 100vw
+  overflow-x: hidden
 
-    .Menu
-      display: flex
-      align-items: center
+  .Gradient1, .Gradient2
+    position: absolute
+    z-index: -1
 
-      .MenuItem
-        margin: 0 2em
+  .Gradient1
+    width: 425px
+    height: 740px
+    left: -5%
+    top: -10%
+    background: radial-gradient(50% 50% at 43.76% 50%, rgba(58, 166, 227, 0.2) 0%, rgba(58, 166, 227, 0) 100%)
 
-        @media screen and (max-width: variables.$mobile-width)
-          margin: 0 .7em
-
-        &:last-child
-          margin-right: 0
-
-      a
-        display: block
-        font-size: 1em
-        font-weight: 500
-        text-decoration: none
-        color: variables.$light-text
-        transition: all .23s ease-in-out
-
-        &:hover
-          opacity: .87
-
-.Gradient1, .Gradient2
-  position: absolute
-  z-index: -1
-
-.Gradient1
-  width: 425px
-  height: 740px
-  left: -5%
-  top: -10%
-  background: radial-gradient(50% 50% at 43.76% 50%, rgba(58, 166, 227, 0.2) 0%, rgba(58, 166, 227, 0) 100%)
-
-.Gradient2
-  width: 425px
-  height: 740px
-  right: -5%
-  top: -7%
-  background: radial-gradient(61.26% 64.07% at 100% 50%, rgba(126, 108, 218, 0.15) 0%, rgba(126, 108, 218, 0) 97.02%)
+  .Gradient2
+    width: 425px
+    height: 740px
+    right: -5%
+    top: -7%
+    background: radial-gradient(61.26% 64.07% at 100% 50%, rgba(126, 108, 218, 0.15) 0%, rgba(126, 108, 218, 0) 97.02%)
