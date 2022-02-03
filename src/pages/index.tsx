@@ -10,6 +10,9 @@ import solidityLogo from "../assets/language-icons/solidity.svg";
 import tsLogo from "../assets/language-icons/ts.svg";
 import th8taLogo from "../assets/partners/th8ta.svg";
 import wasmFeaturePreview from "../assets/features/wasm.svg";
+import chromeLogo from "../assets/runtimes/chrome.svg";
+import denoLogo from "../assets/runtimes/deno.svg";
+import nodeLogo from "../assets/runtimes/nodejs.svg";
 import sandboxFeaturePreview from "../assets/features/sandbox.svg";
 import smartweaveFeaturePreview from "../assets/features/smartweave.svg";
 import cliFeaturePreview from "../assets/features/cli.svg";
@@ -293,24 +296,20 @@ export default function Home() {
             <ArrowRightIcon />
           </a>
         </div>
-        <div className={styles.Demonstrate + " " + styles.SpeedData}>
-          <span>TODO</span>
-          <div className={styles.SpeedGraph}>
-            <div
-              className={styles.Filler}
-              style={{
-                width: `30%`
-              }}
-            />
-          </div>
-          <span>REPLACE WITH RUNTIME ICONS</span>
-          <div className={styles.SpeedGraph}>
-            <div
-              className={styles.Filler}
-              style={{
-                width: `80%`
-              }}
-            />
+        <div className={styles.Demonstrate}>
+          <div className={styles.JavaScriptData}>
+            <div className={styles.Runtime}>
+              <img src={chromeLogo} alt="chrome" />
+              <p>Chrome</p>
+            </div>
+            <div className={styles.Runtime}>
+              <img src={nodeLogo} alt="node" />
+              <p>Node</p>
+            </div>
+            <div className={styles.Runtime}>
+              <img src={denoLogo} alt="deno" />
+              <p>Deno</p>
+            </div>
           </div>
         </div>
       </div>
