@@ -31,7 +31,7 @@ import styles from "../styles/views/Home.module.sass";
 export default function Home() {
   const [jsBenchmark, setJsBenchmark] = useState<GlobalMean>({
     js: 0,
-    smartweaveJs: 0,
+    sw: 0,
     highest: 0
   });
   const [currentURL, setCurrentURL] = useState("");
@@ -63,7 +63,10 @@ export default function Home() {
       }
     };
 
-    calculateGlobalMean("js", "smartweaveJs").then((result) => {
+    calculateGlobalMean(
+      "node ./smartweave/index.js", // Smartweave
+      "../../target/release/bench" // 3EM
+    ).then((result) => {
       setJsBenchmark(result);
     });
 
@@ -252,7 +255,7 @@ export default function Home() {
               className={styles.Filler}
               style={{
                 width: `${calculateHundredPercent(
-                  jsBenchmark.smartweaveJs,
+                  jsBenchmark.sw,
                   jsBenchmark.highest
                 )}%`
               }}
@@ -266,7 +269,7 @@ export default function Home() {
             <div className={styles.Separator} />
             <div className={styles.Cell}>
               <span>SmartWeave</span>
-              <h1>{jsBenchmark.smartweaveJs.toFixed(2)}s</h1>
+              <h1>{jsBenchmark.sw.toFixed(2)}s</h1>
             </div>
           </div>
         </div>
