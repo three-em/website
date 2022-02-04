@@ -300,7 +300,7 @@ export default function Home() {
           <div className={styles.JavaScriptData}>
             <div className={styles.Runtime}>
               <img src={chromeLogo} alt="chrome" />
-              <p>Chrome</p>
+              <p>Web</p>
             </div>
             <div className={styles.Runtime}>
               <img src={nodeLogo} alt="node" />
