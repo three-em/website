@@ -288,7 +288,7 @@ export default function Home() {
             smart contract executor.
           </p>
           <a
-            href="https://github.com/three-em/3em"
+            href="https://github.com/three-em/3em/tree/main/js#executecontract"
             target="_blank"
             rel="noopener noreferrer"
           >
