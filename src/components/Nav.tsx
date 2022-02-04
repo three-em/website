@@ -24,7 +24,7 @@ export default function Nav() {
         <div className={styles.Gradient2} />
       </div>
       <a className={styles.Banner} href="#library">
-        <span>🎉 We have just launched our Javascript library</span>
+        <span>🎉 We just launched our Javascript library</span>
         <ArrowRightIcon />
       </a>
       <div className={styles.Nav + " " + ((scrolled && styles.Scrolled) || "")}>
