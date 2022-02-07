@@ -10,6 +10,9 @@ import solidityLogo from "../assets/language-icons/solidity.svg";
 import tsLogo from "../assets/language-icons/ts.svg";
 import th8taLogo from "../assets/partners/th8ta.svg";
 import wasmFeaturePreview from "../assets/features/wasm.svg";
+import chromeLogo from "../assets/runtimes/chrome.svg";
+import denoLogo from "../assets/runtimes/deno.svg";
+import nodeLogo from "../assets/runtimes/nodejs.svg";
 import sandboxFeaturePreview from "../assets/features/sandbox.svg";
 import smartweaveFeaturePreview from "../assets/features/smartweave.svg";
 import cliFeaturePreview from "../assets/features/cli.svg";
@@ -28,7 +31,7 @@ import styles from "../styles/views/Home.module.sass";
 export default function Home() {
   const [jsBenchmark, setJsBenchmark] = useState<GlobalMean>({
     js: 0,
-    smartweaveJs: 0,
+    sw: 0,
     highest: 0
   });
   const [currentURL, setCurrentURL] = useState("");
@@ -60,7 +63,10 @@ export default function Home() {
       }
     };
 
-    calculateGlobalMean("js", "smartweaveJs").then((result) => {
+    calculateGlobalMean(
+      "node ./smartweave/index.js", // Smartweave
+      "../../target/release/bench" // 3EM
+    ).then((result) => {
       setJsBenchmark(result);
     });
 
@@ -249,7 +255,7 @@ export default function Home() {
               className={styles.Filler}
               style={{
                 width: `${calculateHundredPercent(
-                  jsBenchmark.smartweaveJs,
+                  jsBenchmark.sw,
                   jsBenchmark.highest
                 )}%`
               }}
@@ -263,11 +269,54 @@ export default function Home() {
             <div className={styles.Separator} />
             <div className={styles.Cell}>
               <span>SmartWeave</span>
-              <h1>{jsBenchmark.smartweaveJs.toFixed(2)}s</h1>
+              <h1>{jsBenchmark.sw.toFixed(2)}s</h1>
             </div>
           </div>
         </div>
       </div>
+
+      <div className={styles.Explainer}>
+        <div className={styles.Gradient4 + " " + styles.Right} />
+        <div className={styles.Content}>
+          <h3 className={styles.Pill} id="library">
+            new!
+          </h3>
+          <h1>Javascript Library</h1>
+          <h2>A new Frontier</h2>
+          <p>
+            Made for Developers, 3EM can be used in both client and server side.
+            With our JS library, 3EM can be integrated in a variety of
+            applications while still keeping the integrity of our core
+            principles: Blazingly fast, multi-language, secured & deterministic
+            smart contract executor.
+          </p>
+          <a
+            href="https://github.com/three-em/3em/tree/main/js#executecontract"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Get Started
+            <ArrowRightIcon />
+          </a>
+        </div>
+        <div className={styles.Demonstrate}>
+          <div className={styles.JavaScriptData}>
+            <div className={styles.Runtime}>
+              <img src={chromeLogo} alt="chrome" />
+              <p>Web</p>
+            </div>
+            <div className={styles.Runtime}>
+              <img src={nodeLogo} alt="node" />
+              <p>Node</p>
+            </div>
+            <div className={styles.Runtime}>
+              <img src={denoLogo} alt="deno" />
+              <p>Deno</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className={styles.Explainer}>
         <div className={styles.Demonstrate}>
           <img src="/tiles.png" alt="arweave" className={styles.ArTiles} />

@@ -1,13 +1,24 @@
 @use "../variables"
 
+.Banner
+  display: flex
+  align-items: center
+  vertical-align: middle
+  justify-content: center
+  padding: 0.6em
+  background-color: #3AA6E3FF
+  color: #FFFFFFFF
+  text-decoration: none
+
+  > * + *
+    margin-left: 0.5em
+  
 .Nav
-  position: fixed
+  position: sticky
+  top: 0
   display: flex
   align-items: center
   justify-content: space-between
-  top: 0
-  left: 0
-  right: 0
   padding: 1em 2.5em
   z-index: 1000
   transition: all .23s ease-in-out
@@ -57,20 +68,25 @@
       &:hover
         opacity: .87
 
-.Gradient1, .Gradient2
-  position: absolute
-  z-index: -1
+.NavGradientWrapper
+  position: relative
+  width: 100vw
+  overflow-x: hidden
 
-.Gradient1
-  width: 425px
-  height: 740px
-  left: -5%
-  top: -10%
-  background: radial-gradient(50% 50% at 43.76% 50%, rgba(58, 166, 227, 0.2) 0%, rgba(58, 166, 227, 0) 100%)
+  .Gradient1, .Gradient2
+    position: absolute
+    z-index: -1
 
-.Gradient2
-  width: 425px
-  height: 740px
-  right: -5%
-  top: -7%
-  background: radial-gradient(61.26% 64.07% at 100% 50%, rgba(126, 108, 218, 0.15) 0%, rgba(126, 108, 218, 0) 97.02%)
+  .Gradient1
+    width: 425px
+    height: 740px
+    left: -5%
+    top: -10%
+    background: radial-gradient(50% 50% at 43.76% 50%, rgba(58, 166, 227, 0.2) 0%, rgba(58, 166, 227, 0) 100%)
+
+  .Gradient2
+    width: 425px
+    height: 740px
+    right: -5%
+    top: -7%
+    background: radial-gradient(61.26% 64.07% at 100% 50%, rgba(126, 108, 218, 0.15) 0%, rgba(126, 108, 218, 0) 97.02%)

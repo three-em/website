@@ -1,4 +1,4 @@
-import { DownloadIcon } from "@iconicicons/react";
+import { ArrowRightIcon, DownloadIcon } from "@iconicicons/react";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Button from "./Button";
@@ -19,8 +19,14 @@ export default function Nav() {
 
   return (
     <>
-      <div className={styles.Gradient1} />
-      <div className={styles.Gradient2} />
+      <div className={styles.NavGradientWrapper}>
+        <div className={styles.Gradient1} />
+        <div className={styles.Gradient2} />
+      </div>
+      <a className={styles.Banner} href="#library">
+        <span>🎉 We just launched our Javascript library</span>
+        <ArrowRightIcon />
+      </a>
       <div className={styles.Nav + " " + ((scrolled && styles.Scrolled) || "")}>
         <Link href="/">
           <a className={styles.Logo}>

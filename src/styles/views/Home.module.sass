@@ -84,8 +84,8 @@
         font-weight: 400
         color: variables.$light-text
         margin: 1em 0
-          bottom: 1.65em
-          
+        bottom: 1.65em
+
         @media screen and (max-width: variables.$mobile-width)
           text-align: center
 
@@ -101,7 +101,7 @@
 .LanguageSection
   position: relative
   padding: variables.$side-padding (variables.$side-padding * 2)
-    top: calc(variables.$side-padding / 2)
+  top: calc(variables.$side-padding / 2)
 
   @media screen and (max-width: variables.$mobile-width)
     padding:
@@ -127,7 +127,7 @@
     font-weight: 400
     color: variables.$light-text
     margin: 0
-      top: 1.75em
+    top: 1.75em
     text-align: center
 
     @media screen and (max-width: variables.$mobile-width)
@@ -138,7 +138,7 @@
     align-items: center
     justify-content: center
     margin: 2em 0
-      bottom: 3em
+    bottom: 3em
 
     .Language
       height: 1.4em
@@ -191,7 +191,7 @@
     .FeatureSpacer
       height: 100%
       width: 4em
-      
+
       @media screen and (max-width: variables.$mobile-width)
         width: 3em
 
@@ -201,7 +201,7 @@
   align-items: center
   justify-content: space-between
   padding: variables.$side-padding
-    bottom: 0
+  bottom: 0
   $contentWidth: 46%
 
   @media screen and (max-width: variables.$mobile-width)
@@ -291,9 +291,13 @@
     left: -14%
     top: 2em
     background: radial-gradient(45.5% 45.68% at 56.59% 55.91%, rgba(126, 108, 218, 0.3) 0%, rgba(126, 108, 218, 0) 100%)
-    
+
     @media screen and (max-width: variables.$mobile-width)
       opacity: .6
+
+    &.Right
+      right: -14%
+      left: unset
 
 .SpeedData
   span
@@ -303,7 +307,7 @@
     color: variables.$light-text
     text-transform: uppercase
     margin: 0
-      bottom: .37em
+    bottom: .37em
 
     @media screen and (max-width: variables.$mobile-width)
       font-size: .67em
@@ -312,7 +316,6 @@
     position: relative
     width: 100%
     height: 1.5em
-    background-color: #F9F7F7
     border-radius: 8px
     overflow: hidden
     margin-bottom: 1.3em
@@ -360,6 +363,32 @@
 
         span
           margin-left: 0
+
+.JavaScriptData
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  display: flex
+  align-items: center
+  justify-content: space-between
+  padding: 0 10%
+
+  .Runtime
+    img
+      display: block
+      height: 80px
+      margin: 0 auto
+        bottom: .75em
+      user-select: none
+
+    p
+      text-align: center
+      margin: 0
+      color: variables.$light-text
+      font-size: 1.12em
+      font-weight: 500
 
 .ArTiles
   margin-left: -(variables.$side-padding)
@@ -409,3 +438,15 @@
 .Gradient1, .Gradient2, .Gradient3, .Gradient4
   position: absolute
   z-index: -1
+
+.Pill
+  
+  display: inline-block
+  padding: .3em .8em
+  border-radius: 24px
+  background-color: #3AA6E3FF
+  color: #FFFFFFFF !important
+  font-size: 1.1em
+  font-weight: 500
+  text-transform: uppercase
+  transition: all .23s ease-in-out

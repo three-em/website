@@ -8,9 +8,9 @@ const getAverage = (arr: Array<number>) =>
 
 export const fetchBenchmarks = async () => {
   const benchmarks = await fetch(
-    "https://raw.githubusercontent.com/three-em/3em/main/data/benchmark.json"
+    "https://raw.githubusercontent.com/three-em/3em/main/tools/benchmarks/results.json"
   );
-  return await benchmarks.json();
+  return (await benchmarks.json()).results;
 };
 
 export const calculateGlobalMean = async (
@@ -18,18 +18,18 @@ export const calculateGlobalMean = async (
   key2: string
 ): Promise<GlobalMean> => {
   const benchmarks: Array<any> = await fetchBenchmarks();
-  const key1BenchmarksMean = benchmarks.map(
-    (item) => item.benchmark[key1]?.mean
-  );
-  const key2BenchmarksMean = benchmarks.map(
-    (item) => item.benchmark[key2]?.mean
-  );
+  const key1BenchmarksMean = benchmarks.find(
+    ({ command }) => command === key1
+  ).mean;
+  const key2BenchmarksMean = benchmarks.find(
+    ({ command }) => command === key2
+  ).mean;
 
-  const highest = Math.max(...[...key1BenchmarksMean, ...key2BenchmarksMean]);
+  const highest = Math.max(key1BenchmarksMean, key2BenchmarksMean);
 
   return {
-    [`${key1}`]: getAverage(key1BenchmarksMean),
-    [`${key2}`]: getAverage(key2BenchmarksMean),
+    sw: key1BenchmarksMean,
+    js: key2BenchmarksMean,
     highest
   };
 };
