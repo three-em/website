@@ -64,8 +64,8 @@ export default function Home() {
     };
 
     calculateGlobalMean(
-      "node ./smartweave/index.js", // Smartweave
-      "../../target/release/bench" // 3EM
+      "index.js", // Smartweave
+      "bench" // 3EM
     ).then((result) => {
       setJsBenchmark(result);
     });

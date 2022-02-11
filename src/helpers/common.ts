@@ -18,12 +18,10 @@ export const calculateGlobalMean = async (
   key2: string
 ): Promise<GlobalMean> => {
   const benchmarks: Array<any> = await fetchBenchmarks();
-  const key1BenchmarksMean = benchmarks.find(
-    ({ command }) => command === key1
-  ).mean;
-  const key2BenchmarksMean = benchmarks.find(
-    ({ command }) => command === key2
-  ).mean;
+  const key1BenchmarksMean: number =
+    benchmarks.find(({ command }) => command.endsWith(key1))?.mean || 0;
+  const key2BenchmarksMean: number =
+    benchmarks.find(({ command }) => command.endsWith(key2))?.mean || 0;
 
   const highest = Math.max(key1BenchmarksMean, key2BenchmarksMean);
 
